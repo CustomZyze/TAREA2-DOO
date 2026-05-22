@@ -34,3 +34,9 @@ public abstract class Reunion {
         Duration real = Duration.between(horaInicio, horaFin);
         return real.toMinutes() / 60.0f;
     }
+
+    public abstract List<Asistencia> obtenerAsistencias();
+    public abstract List<Invitacion> obtenerAusencias();
+    public abstract List<Asistencia> obtenerRetrasos();
+    public abstract int obtenerTotalAsistencia();
+    public abstract float obtenerPorcentajeAsistencia();
