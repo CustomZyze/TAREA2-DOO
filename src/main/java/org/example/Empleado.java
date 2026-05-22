@@ -1,16 +1,14 @@
 package org.example;
 
-public class Empleado implements Invitable{
+public class Empleado extends Persona{
     private String id;
     private String apellido;
     private String nombre;
     private String correo;
 
     public Empleado (String a,String b,String c,String d){
+        super(b,c,d);
         id = a;
-        apellido = b;
-        nombre = c;
-        correo = d;
     }
 
     public String getId() { return id; }
