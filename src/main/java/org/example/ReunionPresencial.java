@@ -21,3 +21,19 @@ public class ReunionPresencial extends Reunion{
     @Override
     public List<Invitacion> obtenerAusencias(){
         return new ArrayList<>();
+    }
+
+    @Override
+    public List<Asistencia> obtenerRetrasos(){
+        return new ArrayList<>();
+    }
+
+    @Override
+    public int obtenerTotalAsistencia(){
+        return 0;
+    }
+
+    @Override
+    public float obtenerPorcentajeAsistencia(){
+        return 0.0f;
+    }
