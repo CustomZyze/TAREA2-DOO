@@ -37,3 +37,11 @@ public class ReunionPresencial extends Reunion{
     public float obtenerPorcentajeAsistencia(){
         return 0.0f;
     }
+
+    public String getSala(){
+        return sala;
+    }
+
+    public void setSala(String sala){
+        this.sala = sala;
+    }
