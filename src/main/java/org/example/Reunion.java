@@ -22,3 +22,15 @@ public abstract class Reunion {
     public void iniciar() { //
         this.horaInicio = Instant.now();
     }
+
+    public void finalizar() { //
+        this.horaFin = Instant.now();
+    }
+
+    public float calcularTiempoReal() { //
+        if (horaInicio == null || horaFin == null) {
+            return 0.0f;
+        }
+        Duration real = Duration.between(horaInicio, horaFin);
+        return real.toMinutes() / 60.0f;
+    }
