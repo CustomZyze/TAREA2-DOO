@@ -37,3 +37,11 @@ public class ReunionVirtual extends Reunion{
     public float obtenerPorcentajeAsistencia(){
         return 0.0f;
     }
+
+    public String getEnlace(){
+        return enlace;
+    }
+
+    public void setEnlace(String enlace){
+        this.enlace=enlace;
+    }
