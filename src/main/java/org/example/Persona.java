@@ -1,6 +1,6 @@
 package org.example;
 
-public class Persona implements Invitable {
+public abstract class Persona implements Invitable {
     private String apellido;
     private String nombre;
     private String correo;
@@ -11,7 +11,27 @@ public class Persona implements Invitable {
         this.correo = correo;
     }
 
-    @Override
-    public void invitar() {
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }
