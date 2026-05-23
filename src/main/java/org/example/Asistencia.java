@@ -1,21 +1,21 @@
 package org.example;
 
 public class Asistencia {
-    private Persona empleado;
+    private Persona participante;
 
-    public Asistencia(Persona emp){
-        this.empleado = emp;
+    public Asistencia(Persona par){
+        this.participante = par;
     }
 
-    public Persona getEmpleado(){
-        return empleado;
+    public Persona getParticipante(){
+        return participante;
     }
-    public void setEmpleado(Empleado empleado){
-        this.empleado = empleado;
+    public void setParticipante(Persona par){
+        this.participante = par;
     }
 
     @Override
     public String toString(){
-        return "Asistencia: " + empleado.toString();
+        return "Asistencia: " + participante.toString();
     }
 }

@@ -4,8 +4,8 @@ import java.time.Instant;
 public class Retraso extends Asistencia {
     private Instant hora;
 
-    public Retraso(Persona emp, Instant hora) {
-        super(emp);
+    public Retraso(Persona participante, Instant hora) {
+        super(participante);
         this.hora = hora;
     }
 
@@ -19,7 +19,7 @@ public class Retraso extends Asistencia {
 
     @Override
     public String toString(){
-        return "Retraso en hora [" + hora + "] de " + getEmpleado().toString();
+        return "Retraso en hora [" + hora + "] de " + getParticipante().toString();
     }
 }
 
