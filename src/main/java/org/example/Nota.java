@@ -10,7 +10,7 @@ public class Nota {
         return contenido;
     }
 
-    public void setContenido(){
+    public void setContenido(String contenido){
         this.contenido = contenido;
     }
 
