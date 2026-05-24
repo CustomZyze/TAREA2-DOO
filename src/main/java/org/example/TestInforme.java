@@ -14,7 +14,7 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class InformeReunionTest {
+public class TestInforme {
 
     private ReunionPresencial reunion;
     private InformeReunion informe;
@@ -71,7 +71,7 @@ public class InformeReunionTest {
 
     @Test
     @DisplayName("Generar informe incluye presentes ausentes y retrasos")
-    void generarInforme_incluyePresentesAusentesYRetrasos() throws IOException {
+    void generarInforme_incluyePresentesAusentesYRetrasos() throws IOException, ParticipanteNuloException, HoraInvalidaException {
         Empleado presente = new Empleado("1", "Ana", "Lopez", "ana@empresa.cl");
         Empleado ausente = new Empleado("2", "Carlos", "Perez", "carlos@empresa.cl");
         Empleado atrasado = new Empleado("3", "Maria", "Gomez", "maria@empresa.cl");
@@ -112,7 +112,7 @@ public class InformeReunionTest {
 
     @Test
     @DisplayName("Generar informe muestra total porcentaje y duración real")
-    void generarInforme_muestraResumenNumerico() throws IOException {
+    void generarInforme_muestraResumenNumerico() throws IOException, ParticipanteNuloException {
         Empleado empleado1 = new Empleado("1", "Ana", "Lopez", "ana@empresa.cl");
         Empleado empleado2 = new Empleado("2", "Carlos", "Perez", "carlos@empresa.cl");
 
