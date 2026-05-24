@@ -32,9 +32,9 @@ public abstract class Reunion {
         this.horaFin = Instant.now();
     }
 
-    public float calcularTiempoReal() {
+    public float calcularTiempoReal() throws ReunionException {
         if (horaInicio == null) {
-            return 0.0f;
+            throw new ReunionException("No se puede calcular el tiempo: la reunión aún no ha iniciado.");
         }
 
         Instant fin = (horaFin != null) ? horaFin : Instant.now();

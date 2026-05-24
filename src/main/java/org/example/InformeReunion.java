@@ -48,7 +48,7 @@ public class InformeReunion {
 
             writer.close();
 
-        } catch (IOException e) {
+        } catch (IOException | ReunionException e) {
             System.out.println("Error al generar el informe: " + e.getMessage());
         }
     }
