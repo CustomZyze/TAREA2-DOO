@@ -3,7 +3,10 @@ package org.example;
 public class Asistencia {
     private Persona participante;
 
-    public Asistencia(Persona par){
+    public Asistencia(Persona par) throws ParticipanteNuloException{
+        if (par == null) {
+            throw new ParticipanteNuloException("El participante de la asistencia no puede ser null");
+        }
         this.participante = par;
     }
 
