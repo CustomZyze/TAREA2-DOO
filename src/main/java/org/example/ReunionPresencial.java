@@ -11,7 +11,7 @@ public class ReunionPresencial extends Reunion {
     private List<Asistencia> asistencias;
     private List<Invitacion> invitaciones;
 
-    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista, String sala){
+    public ReunionPresencial(Date fecha, Instant horaPrevista, Duration duracionPrevista,TipoReunion tipoReunion, String sala){
         super(fecha, horaPrevista, duracionPrevista, tipoReunion);
         this.sala=sala;
         this.asistencias=new ArrayList<>();
