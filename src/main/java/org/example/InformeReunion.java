@@ -4,8 +4,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Clase encargada de generar un reporte (archivo de texto) con todos los
+ * detalles relevantes de una reunión finalizada.
+ */
 public class InformeReunion {
 
+    /**
+     * Genera un archivo de texto que contiene el informe de la reunión,
+     * incluyendo fechas, tiempos previstos y reales, y registro completo de las asistencias,
+     * ausencias y retrasos.
+     * * Si pasa un error al crear el archivo o al calcular los tiempos, se captura la
+     * excepción y se imprime un mensaje de error en la consola.
+     *
+     * @param reunion       El objeto Reunion del cual se extraerán los datos para el informe.
+     * @param nombreArchivo El nombre (y ruta opcional) del archivo de texto a crear (ej. "informe.txt").
+     */
      public void generarInforme (Reunion reunion , String nombreArchivo){
         try{
             PrintWriter writer = new PrintWriter(new FileWriter((nombreArchivo)));
