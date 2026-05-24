@@ -18,11 +18,17 @@ public class ReunionPresencial extends Reunion {
         this.invitaciones=new ArrayList<>();
     }
 
-    public void registrarAsistencia(Asistencia asistencia){
+    public void registrarAsistencia(Asistencia asistencia) throws ParticipanteNuloException {
+        if (asistencia == null) {
+            throw new ParticipanteNuloException("No se puede registrar una asistencia nula.");
+        }
         this.asistencias.add(asistencia);
     }
 
-    public void agregarInvitacion(Invitacion invitacion){
+    public void agregarInvitacion(Invitacion invitacion) throws ParticipanteNuloException {
+        if (invitacion == null) {
+            throw new ParticipanteNuloException("No se puede agregar una invitación nula.");
+        }
         this.invitaciones.add(invitacion);
     }
 
