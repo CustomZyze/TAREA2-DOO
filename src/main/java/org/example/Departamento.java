@@ -10,7 +10,10 @@ public class Departamento implements Invitable{
         this.empleados = new ArrayList<>();
     }
 
-    public void añadirEmpleado(Empleado emp){
+    public void añadirEmpleado(Empleado emp) throws ParticipanteNuloException{
+        if (emp == null) {
+            throw new ParticipanteNuloException("No se puede añadir un Empleado null al depto.");
+        }
         this.empleados.add(emp);
     }
 
