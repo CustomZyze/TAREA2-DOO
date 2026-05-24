@@ -13,7 +13,7 @@ public class ReunionVirtual extends Reunion {
     private List<Invitacion> invitaciones;
 
     public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, String enlace){
-        super(fecha, horaPrevista, duracionPrevista);
+        super(fecha, horaPrevista, duracionPrevista, tipoReunion);
         this.enlace=enlace;
         this.asistencias=new ArrayList<>();
         this.invitaciones=new ArrayList<>();
